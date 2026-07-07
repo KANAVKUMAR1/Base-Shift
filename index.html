@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Shift — Utility</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-workspace">
+        <aside class="app-sidebar">
+            <div class="brand">
+                <span class="brand-icon">⧉</span>
+                <span class="brand-name">BaseShift</span>
+            </div>
+            <nav class="mode-menu">
+                <button class="menu-item active" data-mode="binToDec">Binary → Decimal</button>
+                <button class="menu-item" data-mode="decToBin">Decimal → Binary</button>
+                <button class="menu-item" data-mode="textToBin">Text → Binary</button>
+                <button class="menu-item" data-mode="binToText">Binary → Text</button>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="randomBtn" class="secondary-btn">🎲 Inject Random Sample</button>
+            </div>
+        </aside>
+
+        <section class="workspace-panel">
+            
+            <div class="panel-block input-block">
+                <div class="block-header">
+                    <label id="inputLabel" for="mainInput">Source Input</label>
+                    <span class="badge" id="inputBadge">BIN</span>
+                </div>
+                <textarea id="mainInput" placeholder="Enter binary digits (e.g., 101010)..." autofocus></textarea>
+                <div id="validationError" class="status-banner error hidden"></div>
+            </div>
+
+            <div class="panel-block output-block">
+                <div class="block-header">
+                    <label id="outputLabel">Result Output</label>
+                    <button id="copyBtn" class="action-trigger">
+                        <span id="copyText">Copy Code</span>
+                    </button>
+                </div>
+                <div class="output-container">
+                    <pre id="outputDisplay">0</pre>
+                </div>
+            </div>
+
+            <div class="panel-block inspector-block">
+                <div class="block-header">
+                    <label>Compiler Trace & Breakdown</label>
+                </div>
+                <div class="inspector-container">
+                    <pre id="explanationContent">Awaiting input stream...</pre>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
