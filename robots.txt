@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://base-shift-omega.vercel.app/sitemap.xml
